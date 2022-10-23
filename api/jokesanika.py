@@ -4,7 +4,6 @@ import requests  # used for testing
 import random
 
 from model_jokessanika import *
-from model_jokessanika import addSongHappy, addSongSad, countSongs, getRandomSong, getSong, getSongs
 
 song_api = Blueprint('song_api', __name__,
                    url_prefix='/api/songssanika')
@@ -41,13 +40,13 @@ class SongsAPI:
             return jsonify(countMsg)
 
     # put method: addJokeHaHa
-    class _UpdateLike(Resource):
+    class _UpdateSad(Resource):
         def put(self, id):
             addSongSad(id)
             return jsonify(getSong(id))
 
     # put method: addJokeBooHoo
-    class _UpdateJeer(Resource):
+    class _UpdateHappy(Resource):
         def put(self, id):
             addSongHappy(id)
             return jsonify(getSong(id))
@@ -58,12 +57,12 @@ class SongsAPI:
     api.add_resource(_ReadID, '/<int:id>')
     api.add_resource(_ReadRandom, '/random')
     api.add_resource(_ReadCount, '/count')
-    api.add_resource(_UpdateLike, '/like/<int:id>')
-    api.add_resource(_UpdateJeer, '/jeer/<int:id>')
+    api.add_resource(_UpdateSad, '/sad/<int:id>')
+    api.add_resource(_UpdateHappy, '/happy/<int:id>')
     
 if __name__ == "__main__": 
     # server = "http://127.0.0.1:5000" # run local
-    server = 'http://ssjn.nighthawkcodescrums.gq/' # run from web
+    server = 'http://ssjn.nighthawkcodescrums.gq' # run from web
     url = server + "/api/songssanika"
     responses = []  # responses list
 
@@ -78,10 +77,10 @@ if __name__ == "__main__":
         requests.get(url+"/"+num)  # read joke by id
         ) 
     responses.append(
-        requests.put(url+"/like/"+num) # add to like count
+        requests.put(url+"/sad/"+num) # add to like count
         ) 
     responses.append(
-        requests.put(url+"/jeer/"+num) # add to jeer count
+        requests.put(url+"/happy/"+num) # add to jeer count
         ) 
 
     # obtain a random joke
