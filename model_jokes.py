@@ -2,7 +2,7 @@ import random
 
 jokes_data = []
 joke_list = [
-    "If you give someone a program... you will frustrate them for a day; if you teach them how to program... you will "
+    "I Bet On Losing Dogs by Mitski"
     "frustrate them for a lifetime.",
     "Q: Why did I divide sin by tan? A: Just cos.",
     "UNIX is basically a simple operating system... but you have to be a genius to understand the simplicity.",
