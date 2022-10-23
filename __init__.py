@@ -2,7 +2,7 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from model_jokessanika import initSongs
+from model_songs import initSongs
 
 """
 These object can be used throughout project.

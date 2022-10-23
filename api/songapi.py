@@ -3,10 +3,10 @@ from flask_restful import Api, Resource # used for REST API building
 import requests  # used for testing 
 import random
 
-from model_jokessanika import *
+from model_songs import *
 
 song_api = Blueprint('song_api', __name__,
-                   url_prefix='/api/song/')
+                   url_prefix='/api/song')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
 api = Api(song_api)
