@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{ url_for('static', filename='assets/python.jpeg') }}" alt="Python Development" height="250">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/SSjn.png') }}" alt="group-logo" height="250">
                     <div class="card-body">
-                    <h5 class="card-title">What should <mark>Student Developers learn</mark>?</h5>
+                    <h5 class="card-title">Shreya, Sanika, Jiya, and Noor's Scrum Team </h5>
                     <p class="card-text">
                         <ol>
                             <li>Python 3.9 is used for most of our backend PBL. HTML, CSS, JavaScript will be used in frontend</li>
@@ -20,24 +20,24 @@
                             <li>API and Microservice using Flask.  Mastering development techniques in creating and consuming RESTful APIs</li>
                         </ol>
                     </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="https://jiya-sav.github.io/SSJN/" class="btn btn-primary">Our Group Blog</a>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card">
-                    <img class="card-img-top" src="{{ url_for('static', filename='assets/flask.png') }}" alt="Flask Development" height="250">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/spotify.png') }}" alt="Group Project" height="250">
                     <div class="card-body">
-                    <h5 class="card-title">What is <mark>Flask</mark>? How do I start Web development?</h5>
+                    <h5 class="card-title">SSJN x Spotify!</h5>
                     <p class="card-text">
                         <ol>
-                            <li>Flask Framework is the popular Web Application development framework of Python.</li>
-                            <li>Blueprint is utility to help abstract complexity, moving information in independent files and directories.</li>
-                            <li>HTML using Bootstrap is a great way to build interesting pages and reduce CSS</li>
-                            <li>Jinja2 is a server-side Python like template engine, supports HTML5 web development, and provides full integration with Flask.</li>
+                            <li>Our scrum team project will link users with songs that match their emotions!</li>
+                            <li>Music is an integral part of our lives, and our project will make it easier for users to discover new music for any moment.</li>
+                            <li>Users will input their current emotion into a text box</li>
+                            <li>Our program will output a list of songs that matches the emotion entered, with links to start exploring!</li>
                         </ol>
                     </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="https://jiya-sav.github.io/SSJN/markdown/2022/09/25/team-project-purpose.html" class="btn btn-primary">Our Project Purpose</a>
                     </div>
                 </div>
             </div>
@@ -61,4 +61,24 @@
             
         </div>
     </div>
+{% endblock %}
+
+<!-- Setting up a block replacement to customize background to NET 
+1. change "rings" to "net" in line 69
+2. change "rings" to "net" in line 71-->
+{% block background %}
+    <script src="{{ url_for('static', filename='js/three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vanta.net.min.js') }}"></script>
+    <script>
+        VANTA.NET({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
 {% endblock %}
