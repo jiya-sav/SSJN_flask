@@ -21,7 +21,7 @@ song_list = [
     "Long Way Down by Dr. Dog",
     "Baby I'm Yours by Artic Monkeys",
     "White Ferrari by Frank Ocean",
-    "Iceblink Luck by Cocteau Twins"
+    'Iceblink Luck by Cocteau Twins'
 ]
 
 # Initialize jokes
