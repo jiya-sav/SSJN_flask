@@ -1,5 +1,5 @@
 # import "packages" from flask
-from flask import render_template  # import render_template from "public" flask libraries
+from flask import render_template # import render_template from "public" flask libraries
 # import "packages" from "this" project
 from __init__ import app  # Definitions initialization
 from api.songapi import song_api # Blueprint import api definition
