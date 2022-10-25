@@ -2,7 +2,7 @@ import random
 
 song_data = []
 song_list = [
-    "I Bet On Losing Dogs by Mitski"
+    "I Bet On Losing Dogs by Mitski",
     "Matilda by Harry Styles",
     "Music For a Sushi Restaurant by Harry Styles",
     "Mirrorball by Taylor Swift",
