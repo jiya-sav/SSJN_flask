@@ -62,7 +62,7 @@ class SongsAPI:
     
 if __name__ == "__main__": 
     # server = "http://127.0.0.1:5000" # run local
-    server = 'http://ssjn.nighthawkcodescrums.gq' # run from web
+    server = 'https://ssjn.nighthawkcodescrums.gq' # run from web
     url = server + "/api/song"
     responses = []  # responses list
 
