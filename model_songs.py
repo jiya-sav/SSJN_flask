@@ -104,7 +104,7 @@ def addSongHappy(id):
 
 # adding Indian
 def addSongIndian(id):
-    song_data[id]['Indian'] = song_data[id]['Idian'] + 1
+    song_data[id]['Indian'] = song_data[id]['Indian'] + 1
     return song_data[id]['Indian']
 
 # Pretty Print joke
