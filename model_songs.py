@@ -13,7 +13,7 @@ song_list = [
     "I Bet on Losing Dogs by Mitski",
     "Twilight by bôa",
     "People by Agust D",
-    "It just is by eaj ft. Seori]",
+    "It just is by eaj ft. Seori",
     "Who by Lauv ft. BTS",
     "eclipse by ASH ISLAND",
     "Pity Party by Melanie Martinez",
