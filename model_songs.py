@@ -81,6 +81,8 @@ song_list = [
     "Tanhayee by Sonu Nigam",
     "Tum Hi Ho by Arjit Singh",
     "Kal Ho Naa Ho by Shankar-Eshaan Loy"
+    "Jalebi Baby by Tesher"
+    "Skechers by Carbine and DripReport"
 
     # rage songs
     "Numb by Linkin Park",
