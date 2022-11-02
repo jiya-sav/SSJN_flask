@@ -30,6 +30,7 @@ song_list = [
     "I took a pill in Ibiza by Mike Posner",
     "Jealous by Labrinth",
     "In the End by Linkin Park",
+
     # from joy fastpages:
     "Bumblebee by Dora Jar",
     "Jackie and Wilson by Hozier",
@@ -38,7 +39,8 @@ song_list = [
     "Marvelous by Wallows",
     "Island In The Sun by Weezer",
     "Olivia by One Direction",
-    "Mr. Blue Sky by Electric Light Orchestra"
+    "Mr. Blue Sky by Electric Light Orchestra",
+
     # Indian genre additions
     "Chammak Challo by Akon",
     "Badtameez Dil by Pritam",
@@ -104,7 +106,7 @@ def initSongs():
     # setup jokes into a dictionary with id, song, sad, happy
     item_id = 0
     for item in song_list:
-        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "Indian": 0})
+        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "Indian": 0, "rage": 0"})
         item_id += 1
     # prime some sad responses
     for i in range(10):
@@ -118,6 +120,10 @@ def initSongs():
     for i in range(15):
         id = getRandomSong()['id']
         addSongIndian(id)
+    # added emotion rage
+    for i in range(15):
+        id = getRandomSong()['id']
+        addSongRage(id)
         
 # Return all jokes from jokes_data
 def getSongs():
@@ -166,10 +172,15 @@ def addSongIndian(id):
     song_data[id]['Indian'] = song_data[id]['Indian'] + 1
     return song_data[id]['Indian']
 
+# adding rage
+def addSongRage(id):
+    song_data[id]['rage'] = song_data[id]['rage'] + 1
+    return song_data[id]['rage']
+
 # Pretty Print joke
 # added indian
 def printSong(song):
-    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['Indian'], "\n")
+    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['Indian'], "\n", "Rage:", song['rage'], "\n")
 
 # Number of jokes
 def countSongs():
