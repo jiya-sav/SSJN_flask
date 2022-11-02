@@ -3,10 +3,10 @@ from flask_restful import Api, Resource # used for REST API building
 import requests  # used for testing 
 import random
 
-from model_jokessanika import *
+from model_songs import *
 
 song_api = Blueprint('song_api', __name__,
-                   url_prefix='/api/songssanika')
+                   url_prefix='/api/song')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
 api = Api(song_api)
@@ -62,8 +62,8 @@ class SongsAPI:
     
 if __name__ == "__main__": 
     # server = "http://127.0.0.1:5000" # run local
-    server = 'http://ssjn.nighthawkcodescrums.gq' # run from web
-    url = server + "/api/songssanika"
+    server = 'https://ssjn.nighthawkcodescrums.gq' # run from web
+    url = server + "/api/song"
     responses = []  # responses list
 
     # get count of jokes on server
