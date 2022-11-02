@@ -97,16 +97,18 @@ song_list = [
     "We're Not Gonna Take It by Twisted Sisters",
     "Crawling by Linkin Park",
     "Toxicity by System of the Down",
+    "Tum Hi Ho by Arjit Singh",
+    "Kal Ho Naa Ho by Shankar-Eshaan-Loy",
 
 
 ]
 
 # Initialize jokes
 def initSongs():
-    # setup jokes into a dictionary with id, song, sad, happy
+    # setup jokes into a dictionary with id, song, sad, happy, Indian, rage
     item_id = 0
     for item in song_list:
-        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "Indian": 0, "rage": 0"})
+        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "Indian": 0, "rage": 0})
         item_id += 1
     # prime some sad responses
     for i in range(10):
