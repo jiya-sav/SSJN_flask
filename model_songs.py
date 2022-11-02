@@ -173,8 +173,8 @@ def addSongHappy(id):
 
 # adding Indian
 def addSongIndian(id):
-    song_data[id]['Indian'] = song_data[id]['Indian'] + 1
-    return song_data[id]['Indian']
+    song_data[id]['indian'] = song_data[id]['indian'] + 1
+    return song_data[id]['indian']
 
 # adding rage
 def addSongRage(id):
@@ -184,7 +184,7 @@ def addSongRage(id):
 # Pretty Print joke
 # added indian
 def printSong(song):
-    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['Indian'], "\n", "Rage:", song['rage'], "\n")
+    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['indian'], "\n", "Rage:", song['rage'], "\n")
 
 # Number of jokes
 def countSongs():
