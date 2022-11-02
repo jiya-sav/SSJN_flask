@@ -51,6 +51,12 @@ class SongsAPI:
             addSongHappy(id)
             return jsonify(getSong(id))
 
+    # put method: addJokeBooHoo
+    class _UpdateRage(Resource):
+        def put(self, id):
+            addSongRage(id)
+            return jsonify(getSong(id))
+
     # building RESTapi resources/interfaces, these routes are added to Web Server
     api.add_resource(_Create, '/create/<string:song>')
     api.add_resource(_Read, '/')
@@ -59,6 +65,7 @@ class SongsAPI:
     api.add_resource(_ReadCount, '/count')
     api.add_resource(_UpdateSad, '/sad/<int:id>')
     api.add_resource(_UpdateHappy, '/happy/<int:id>')
+    api.add_resource(_UpdateRage, '/rage/<int:id>')
     
 if __name__ == "__main__": 
     # server = "http://127.0.0.1:5000" # run local
@@ -82,6 +89,10 @@ if __name__ == "__main__":
     responses.append(
         requests.put(url+"/happy/"+num) # add to jeer count
         ) 
+    responses.append(
+        requests.put(url+"/rage/"+num) # add to jeer count
+        ) 
+
 
     # obtain a random joke
     responses.append(
