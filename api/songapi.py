@@ -51,12 +51,12 @@ class SongsAPI:
             addSongHappy(id)
             return jsonify(getSong(id))
     # adding rage and Indian
-     class _UpdateRage(Resource):
+    class _UpdateRage(Resource):
         def put(self, id):
             addSongRage(id)
             return jsonify(getSong(id))
         
-     class _UpdateIndian(Resource):
+    class _UpdateIndian(Resource):
         def put(self, id):
             addSongIndian(id)
             return jsonify(getSong(id))
