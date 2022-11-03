@@ -98,7 +98,9 @@ song_list = [
     "Last Resort by Papa Roach",
     "We're Not Gonna Take It by Twisted Sisters",
     "Crawling by Linkin Park",
-    "Toxicity by System of the Down" # deleted last comma
+    "Toxicity by System of the Down",
+    "Tum Hi Ho by Arjit Singh",
+    "Kal Ho Naa Ho by Shankar-Eshaan-Loy", # deleted last comma
 
 ]
 
