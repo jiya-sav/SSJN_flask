@@ -44,7 +44,6 @@ class SongsAPI:
         def put(self, id):
             addSongSad(id)
             return jsonify(getSong(id))
-
     # put method: addJokeBooHoo
     class _UpdateHappy(Resource):
         def put(self, id):
