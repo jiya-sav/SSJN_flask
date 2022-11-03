@@ -100,8 +100,7 @@ song_list = [
     "Crawling by Linkin Park",
     "Toxicity by System of the Down",
     "Tum Hi Ho by Arjit Singh",
-    "Kal Ho Naa Ho by Shankar-Eshaan-Loy",
-
+    "Kal Ho Naa Ho by Shankar-Eshaan-Loy" # deleted last comma
 
 ]
 
@@ -110,7 +109,7 @@ def initSongs():
     # setup jokes into a dictionary with id, song, sad, happy, Indian, rage
     item_id = 0
     for item in song_list:
-        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "Indian": 0, "rage": 0})
+        song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "indian": 0, "rage": 0})
         item_id += 1
     # prime some sad responses
     for i in range(10):
@@ -173,8 +172,8 @@ def addSongHappy(id):
 
 # adding Indian
 def addSongIndian(id):
-    song_data[id]['Indian'] = song_data[id]['Indian'] + 1
-    return song_data[id]['Indian']
+    song_data[id]['indian'] = song_data[id]['indian'] + 1
+    return song_data[id]['indian']
 
 # adding rage
 def addSongRage(id):
@@ -184,7 +183,7 @@ def addSongRage(id):
 # Pretty Print joke
 # added indian
 def printSong(song):
-    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['Indian'], "\n", "Rage:", song['rage'], "\n")
+    print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['indian'], "\n", "Rage:", song['rage'], "\n")
 
 # Number of jokes
 def countSongs():
