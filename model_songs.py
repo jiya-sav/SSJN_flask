@@ -80,9 +80,9 @@ song_list = [
     "Give Me Some Sunshine by Suraj Jagan",
     "Tanhayee by Sonu Nigam",
     "Tum Hi Ho by Arjit Singh",
-    "Kal Ho Naa Ho by Shankar-Eshaan Loy"
-    "Jalebi Baby by Tesher"
-    "Skechers by Carbine and Drip"
+    "Kal Ho Naa Ho by Shankar-Eshaan Loy",
+    "Jalebi Baby by Tesher",
+    "Skechers by Carbine and Drip",
 
     # rage songs
     "Numb by Linkin Park",
@@ -98,9 +98,7 @@ song_list = [
     "Last Resort by Papa Roach",
     "We're Not Gonna Take It by Twisted Sisters",
     "Crawling by Linkin Park",
-    "Toxicity by System of the Down",
-    "Tum Hi Ho by Arjit Singh",
-    "Kal Ho Naa Ho by Shankar-Eshaan-Loy" # deleted last comma
+    "Toxicity by System of the Down" # deleted last comma
 
 ]
 
