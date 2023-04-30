@@ -17,17 +17,17 @@ class SongsAPI:
         def post(self, song):
             pass
             
-    # getJokes()
+    # getSongs()
     class _Read(Resource):
         def get(self):
             return jsonify(getSongs())
 
-    # getJoke(id)
+    # getSong(id)
     class _ReadID(Resource):
         def get(self, id):
             return jsonify(getSong(id))
 
-    # getRandomJoke()
+    # getRandomSong()
     class _ReadRandom(Resource):
         def get(self):
             return jsonify(getRandomSong())
@@ -39,22 +39,22 @@ class SongsAPI:
             countMsg = {'count': count}
             return jsonify(countMsg)
 
-    # put method: addJokeHaHa
+    # put method: addSongSad
     class _UpdateSad(Resource):
         def put(self, id):
             addSongSad(id)
             return jsonify(getSong(id))
-    # put method: addJokeBooHoo
+    # put method: addSongHappy
     class _UpdateHappy(Resource):
         def put(self, id):
             addSongHappy(id)
             return jsonify(getSong(id))
-    # adding rage and Indian
+    # put method: addSongRage
     class _UpdateRage(Resource):
         def put(self, id):
             addSongRage(id)
             return jsonify(getSong(id))
-        
+    # put method: addSongIndian
     class _UpdateIndian(Resource):
         def put(self, id):
             addSongIndian(id)
@@ -84,27 +84,27 @@ if __name__ == "__main__":
     count_json = count_response.json()
     count = count_json['count']
 
-    # update likes/dislikes test sequence
+    # update emotion opinion test sequence
     num = str(random.randint(0, count-1)) # test a random record
     responses.append(
-        requests.get(url+"/"+num)  # read joke by id
+        requests.get(url+"/"+num)  # read song by id
         ) 
     responses.append(
-        requests.put(url+"/sad/"+num) # add to like count
+        requests.put(url+"/sad/"+num) # add to sad count
         ) 
     responses.append(
-        requests.put(url+"/happy/"+num) # add to jeer count
+        requests.put(url+"/happy/"+num) # add to happy count
         ) 
     responses.append(
-        requests.put(url+"/rage/"+num) # add to like count
+        requests.put(url+"/rage/"+num) # add to rage count
         ) 
     responses.append(
-        requests.put(url+"/indian/"+num) # add to like count
+        requests.put(url+"/indian/"+num) # add to indian count
         ) 
 
     # obtain a random joke
     responses.append(
-        requests.get(url+"/random")  # read a random joke
+        requests.get(url+"/random")  # read a random song
         ) 
 
     # cycle through responses
