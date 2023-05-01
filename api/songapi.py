@@ -32,7 +32,7 @@ class SongsAPI:
         def get(self):
             return jsonify(getRandomSong())
     
-    # getRandomJoke()
+    # getRandomSong()
     class _ReadCount(Resource):
         def get(self):
             count = countSongs()
@@ -79,7 +79,7 @@ if __name__ == "__main__":
     url = server + "/api/song"
     responses = []  # responses list
 
-    # get count of jokes on server
+    # get count of songs on server
     count_response = requests.get(url+"/count")
     count_json = count_response.json()
     count = count_json['count']
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         requests.put(url+"/indian/"+num) # add to indian count
         ) 
 
-    # obtain a random joke
+    # obtain a random song
     responses.append(
         requests.get(url+"/random")  # read a random song
         ) 

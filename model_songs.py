@@ -102,11 +102,11 @@ song_list = [
     "Tum Hi Ho by Arjit Singh",
     "Kal Ho Naa Ho by Shankar-Eshaan-Loy", # deleted last comma
 
-]
+] # end of songs list
 
-# Initialize jokes
+# Initialize songs
 def initSongs():
-    # setup jokes into a dictionary with id, song, sad, happy, Indian, rage
+    # setup songs into a dictionary with id, song, sad, happy, Indian, rage
     item_id = 0
     for item in song_list:
         song_data.append({"id": item_id, "song": item, "sad": 0, "happy": 0, "indian": 0, "rage": 0})
@@ -128,7 +128,7 @@ def initSongs():
         id = getRandomSong()['id']
         addSongRage(id)
         
-# Return all jokes from jokes_data
+# Return all songs from song_data
 def getSongs():
     return(song_data)
 
@@ -136,11 +136,11 @@ def getSongs():
 def getSong(id):
     return(song_data[id])
 
-# Return random joke from jokes_data
+# Return random song from song_data
 def getRandomSong():
     return(random.choice(song_data))
 
-# Liked joke
+# Liked song
 def favoriteSong():
     best = 0
     bestID = -1
@@ -150,7 +150,7 @@ def favoriteSong():
             bestID = song['id']
     return song_data[bestID]
     
-# Jeered joke
+# sad song
 def sadSong():
     worst = 0
     worstID = -1
@@ -160,12 +160,12 @@ def sadSong():
             worstID = song['id']
     return song_data[worstID]
 
-# Add to haha for requested id
+# Add to sad for requested id
 def addSongSad(id):
     song_data[id]['sad'] = song_data[id]['sad'] + 1
     return song_data[id]['sad']
 
-# Add to boohoo for requested id
+# Add to happy for requested id
 def addSongHappy(id):
     song_data[id]['happy'] = song_data[id]['happy'] + 1
     return song_data[id]['happy']
@@ -180,20 +180,19 @@ def addSongRage(id):
     song_data[id]['rage'] = song_data[id]['rage'] + 1
     return song_data[id]['rage']
 
-# Pretty Print joke
 # added indian
 def printSong(song):
     print(song['id'], song['Song'], "\n", "Sad:", song['sad'], "\n", "Happy:", song['happy'], "\n", "Indian:", song['indian'], "\n", "Rage:", song['rage'], "\n")
 
-# Number of jokes
+# Number of songs
 def countSongs():
     return len(song_data)
 
-# Test Joke Model
+# Test Song Model
 if __name__ == "__main__": 
-    initSongs()  # initialize jokes
+    initSongs()  # initialize songs
     
-    # Most likes and most jeered
+    # Most likes and most sad
     best = favoriteSong()
     print("Most sad", best['sad'])
     printSong(best)
@@ -201,9 +200,9 @@ if __name__ == "__main__":
     print("Most happy", worst['happy'])
     printSong(worst)
     
-    # Random joke
+    # Random song
     print("Random song")
     printSong(getRandomSong())
     
-    # Count of Jokes
+    # Count of songs
     print("Song Count: " + str(countSongs()))
